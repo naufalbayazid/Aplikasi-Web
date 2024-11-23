@@ -1,0 +1,27 @@
+<h1>Daftar Pasien</h1>
+<a href="/add">Tambah Pasien</a>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nama</th>
+      <th>Umur</th>
+      <th>Penyakit</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% patients.forEach(patient => { %>
+      <tr>
+        <td><%= patient.id %></td>
+        <td><%= patient.name %></td>
+        <td><%= patient.age %></td>
+        <td><%= patient.disease %></td>
+        <td>
+          <a href="/edit/<%= patient.id %>">Edit</a> | 
+          <a href="/delete/<%= patient.id %>">Delete</a>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

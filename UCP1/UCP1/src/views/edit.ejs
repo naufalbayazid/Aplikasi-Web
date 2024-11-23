@@ -1,0 +1,8 @@
+<h1>Edit Pasien</h1>
+<form action="/edit" method="POST">
+  <input type="hidden" name="id" value="<%= patient.id %>">
+  <input type="text" name="name" value="<%= patient.name %>" required><br>
+  <input type="number" name="age" value="<%= patient.age %>" required><br>
+  <input type="text" name="disease" value="<%= patient.disease %>" required><br>
+  <button type="submit">Update</button>
+</form>
